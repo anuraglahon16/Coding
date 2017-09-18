@@ -1,0 +1,20 @@
+#include<iostream>
+using namespace std;
+
+
+int main(){
+        int n;
+        cin>>n;
+        int even=2;
+        int sum=0;
+        while(even<=n)
+        {
+            sum=sum+even;
+            
+            even=even+2;
+        }
+       /*  Read input as specified in the question.
+	* Print output as specified in the question.
+	*/
+  cout<<sum;
+}
