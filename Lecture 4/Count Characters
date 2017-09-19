@@ -1,0 +1,32 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+char c;
+c=cin.get();
+int count1=1;
+int count2=0;
+int count3=0;
+while(c!='$')
+{
+    
+    c=cin.get();
+ if(c>= 97 && c<=122){
+              count1++;
+ }
+              else if (c>= 48 && c<=57)
+                    {
+                        count2++;
+                    }
+              else if (c == ' ' || c =='\n' || c == '\t')
+                       {
+                           count3++;
+                       }
+
+
+
+}
+cout<<count1<<" ";
+cout<<count2<<" ";
+cout<<count3<<endl;
+}
