@@ -1,0 +1,13 @@
+void printTable(int start, int end, int step) {
+    /* Don't write main().
+     * Don't read input, it is passed as function argument.
+     * Print output and don't return it.
+     * Taking input is handled automatically.
+     */
+  while(start<=end)
+  {
+      int c=(5.0/9)*(start-32);
+      cout<<start<<"\t"<<c<<endl;
+      start=start+step;
+  }
+}
