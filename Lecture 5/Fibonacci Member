@@ -1,0 +1,15 @@
+
+bool checkMember(int n){
+
+
+ int prev = 0;
+ int curr = 1;
+ while(prev<=n){
+   if(prev == n){
+     return true;
+     
+   }
+   curr = prev + curr;
+   prev = curr - prev;
+ }return false;
+}
