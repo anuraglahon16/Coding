@@ -1,0 +1,25 @@
+#include<climits>
+#include<algorithm>
+int FindSecondLargest(int arr[], int n){
+    /* Don't write main().
+     * Don't read input, it is passed as function argument.
+     * Return output and don't print it.
+     * Taking input and printing output is handled automatically.
+     */
+int max1,max2;
+max1=max2=INT_MIN;
+int i;
+for(i=0;i<n;i++)
+{
+    if(arr[i]>max1)
+    {
+        max2=max1;
+        max1=arr[i];
+    }
+    else if(arr[i]>max2  && arr[i] != max1)
+    {
+        max2=arr[i];
+    }
+}
+return max2;
+}
