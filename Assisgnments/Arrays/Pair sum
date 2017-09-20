@@ -1,0 +1,24 @@
+#include<algorithm>
+void pairSum(int input[], int size, int x) {
+    /* Don't write main().
+     * Don't read input, it is passed as function argument.
+     * Print the output and don't return it.
+     * Taking input is handled automatically.
+     */
+
+ 
+  
+ sort(input,input+size);
+ for(int i=0;i<size-1;i++)
+ {
+     for(int j=i+1;j<size;j++)
+     {
+         if(input[i]+input[j]==x)
+         {
+             cout<<input[i]<<" "<<input[j]<<endl;
+         }
+     }
+ }
+
+
+}
