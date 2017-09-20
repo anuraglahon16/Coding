@@ -1,0 +1,30 @@
+#include<algorithm>
+#include<cstring>
+void reverse(int start,int end,char input[])
+{
+    char tmp;
+    while(end>start)
+    {
+        tmp=input[start];
+        input[start]=input[end];
+        input[end]=tmp;
+        end--;
+        start++;
+    }
+}
+void reverseStringWordWise(char input[]) {
+    // Write your code here
+int i=0;
+int start=0;
+int l=strlen(input);
+reverse(0,l-1,input);
+while(i<l)
+{
+    start=i;
+    while(input[i]!=' ' && input[i]!='\0')
+        i++;
+    reverse(start,i-1,input);
+    while(input[i]==' ')
+        i++;
+}
+}
