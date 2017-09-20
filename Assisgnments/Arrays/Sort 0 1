@@ -1,0 +1,29 @@
+void SortZeroesAndOne(int arr[], int n){
+    /* Don't write main().
+     * Don't read input, it is passed as function argument.
+     * Update in the given array itself. Don't return or print anything.
+     * Taking input and printing output is handled automatically.
+     */
+   
+    int left = 0, right = n-1;
+ 
+    while (left < right)
+    {
+        
+        while (arr[left] == 0 && left < right)
+            left++;
+ 
+        
+        while (arr[right] == 1 && left < right)
+            right--;
+ 
+        
+        if (left < right)
+        {
+            arr[left] = 0;
+            arr[right] = 1;
+            left++;
+            right--;
+        }
+    }
+}
