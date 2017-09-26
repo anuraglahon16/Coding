@@ -1,0 +1,19 @@
+#define TOTAL_CHARS 256
+#include<bits/stdc++.h>
+bool isPermutation(char input1[], char input2[]) {
+    // Write your code here
+int count1[TOTAL_CHARS] = {0};
+	int count2[TOTAL_CHARS] = {0};
+	int index;
+	if (strlen(input1) != strlen(input2))
+		return false;
+	for(index = 0; input1[index] && input2[index]; index++)
+	{
+		count1[input1[index]]++;
+		count2[input2[index]]++;
+	}
+	for(index = 0; index < TOTAL_CHARS; index++)
+		if(count1[index] != count2[index])
+			return false;
+	return true;
+}
