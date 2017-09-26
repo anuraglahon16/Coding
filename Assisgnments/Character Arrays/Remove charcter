@@ -1,0 +1,36 @@
+#include<algorithm>
+#include <iostream>
+#include <cassert>
+#include <cstring>
+void removeAllOccurrencesOfChar(char input[], char c) {
+    // Write your code here
+
+    assert(input != NULL);
+    
+    int hole = -1;
+    int i = 0;
+    while(input[i] != '\0')
+    {
+        if (input[i] == c)
+        {
+            if (hole == -1)
+            {
+                hole = i;
+            }
+        }
+        else
+        {
+           
+            if (hole != -1)
+            {
+                input[hole++] = input[i];
+            }
+        }
+        i++;
+    }
+    input[hole] = '\0';
+    return;
+    
+    
+    
+}
